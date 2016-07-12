@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImagePicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5XR-LT-Ssh" userLabel="Top">
+                                <rect key="frame" x="236" y="118" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wCP-nu-AcW" userLabel="Bottom">
+                                <rect key="frame" x="236" y="366" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hy9-F2-fcI" userLabel="Share">
+                                <rect key="frame" x="20" y="28" width="46" height="44"/>
+                                <state key="normal" title="Share"/>
+                                <connections>
+                                    <action selector="share:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4zS-m0-dgD"/>
+                                </connections>
+                            </button>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A5l-w3-bIX">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem title="Pick" id="7LW-a9-e4f">
+                                        <connections>
+                                            <action selector="pickAnImage:" destination="BYZ-38-t0r" id="yb3-ER-Jma"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Camera" id="Whd-HX-UlA">
+                                        <connections>
+                                            <action selector="pickAnImageFromCamera:" destination="BYZ-38-t0r" id="RrZ-v8-h8I"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vtn-EX-St9">
+                                <rect key="frame" x="108" y="0.0" width="338" height="556"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="540" id="2e4-h8-HGE"/>
+                                    <constraint firstAttribute="width" constant="299" id="4id-ue-5oD"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="A5l-w3-bIX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="2hE-bI-pc3"/>
+                            <constraint firstItem="A5l-w3-bIX" firstAttribute="top" secondItem="vtn-EX-St9" secondAttribute="bottom" constant="117" id="6F9-ZR-r9t"/>
+                            <constraint firstItem="5XR-LT-Ssh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AiN-34-0gE"/>
+                            <constraint firstItem="vtn-EX-St9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Bmr-Ex-3Hs"/>
+                            <constraint firstItem="A5l-w3-bIX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="EJW-Gb-R5q"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="A5l-w3-bIX" secondAttribute="bottom" id="ICA-L0-Nsh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="A5l-w3-bIX" secondAttribute="trailing" constant="-20" id="ITj-mB-lfy"/>
+                            <constraint firstItem="A5l-w3-bIX" firstAttribute="top" secondItem="vtn-EX-St9" secondAttribute="bottom" id="KH5-dy-Qkk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="A5l-w3-bIX" secondAttribute="trailing" constant="-20" id="O4I-m8-5wG"/>
+                            <constraint firstItem="wCP-nu-AcW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YeT-GX-32L"/>
+                            <constraint firstItem="vtn-EX-St9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="y2h-5C-4yE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bottomText" destination="wCP-nu-AcW" id="aSL-0p-pkW"/>
+                        <outlet property="camera" destination="Whd-HX-UlA" id="EdA-QS-q1U"/>
+                        <outlet property="imagePickerView" destination="vtn-EX-St9" id="zVL-kc-Zhi"/>
+                        <outlet property="share" destination="hy9-F2-fcI" id="63W-lo-es5"/>
+                        <outlet property="toolbar" destination="A5l-w3-bIX" id="aR2-t6-nuM"/>
+                        <outlet property="topText" destination="5XR-LT-Ssh" id="I87-Hq-hUx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="296" y="310"/>
+        </scene>
+    </scenes>
+</document>
